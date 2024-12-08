@@ -31,3 +31,12 @@ react-router-dom是基于react-router的，适用于浏览器端应用，react-r
 ```shell
 npm install react-router-dom --save
 ```
+
+## RouterProvider 
+
+可以理解为是整个路由的容器
+
+所有路由器对象都传递给此组件以呈现您的应用程序并启用其余 API
+
+### fallbackElement
+路由加载资源需要有等待的过程，在此等待期间，您可以提供一个 fallbackElement 来向用户表明该应用程序正在运行
