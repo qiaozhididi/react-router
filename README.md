@@ -19,3 +19,15 @@ ReactRouter 路由，让用 react.js 构建单页面应用变得轻而易举
 | 数据传递  | 容易(路由或者组件之间传递)           | 依赖URL传参、本地存储传参 |
 | SEO   | 不利于SEO（后续有其他解决方案）        | 利于SEO          |
 | 维护成本  | 相对容易                     | 相对复杂           |
+
+## react-router
+
+为 React Router 提供核心路由功能，但是你不需要直接安装 react-router
+
+react-router-dom
+
+react-router-dom是基于react-router的，适用于浏览器端应用，react-router-dom包含react-router的所有功能，并且又增加了适合在浏览器运行环境下的一些功能
+
+```shell
+npm install react-router-dom --save
+```
