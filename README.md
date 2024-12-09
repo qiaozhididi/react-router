@@ -40,3 +40,9 @@ npm install react-router-dom --save
 
 ### fallbackElement
 路由加载资源需要有等待的过程，在此等待期间，您可以提供一个 fallbackElement 来向用户表明该应用程序正在运行
+
+## BrowserRouter
+
+`<BrowserRouter>`使用HTML5 History API保持页面 和 URL 的同步，使用干净的URL将当前位置存储在浏览器的地址栏中
+
+URL模式: a.com/#/one 或者 a.com/one

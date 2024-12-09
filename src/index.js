@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import router from "./router/index";
-import Loadding from "./views/Loadding";
-import {
-  BrowserRouter,
-  Outlet,
-  Route,
-  Routes,
-  Link,
-  RouterProvider,
-} from "react-router-dom";
+// import router from "./router/index";
+// import Loadding from "./views/Loadding";
+import App from "./App";
+// import {
+//   BrowserRouter,
+//   Outlet,
+//   Route,
+//   Routes,
+//   Link,
+//   RouterProvider,
+// } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,8 +23,9 @@ root.render(
           <Route path="user" element={<User />}></Route>
         </Route>
       </Routes> */}
-    <RouterProvider router={router} fallbackElement={<Loadding></Loadding>} />
+    {/* <RouterProvider router={router} fallbackElement={<Loadding></Loadding>} /> */}
     {/* </BrowserRouter> */}
+    <App />
   </React.StrictMode>
 );
 
