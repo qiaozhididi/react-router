@@ -1,23 +1,28 @@
 //路由配置
 import { createBrowserRouter } from "react-router-dom";
-import App from "../views/App";
+import ContainerView from "../views/ContainerView";
 import HomeView from "../views/HomeView";
 import UserView from "../views/UserView";
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <ContainerView />,
+      children: [
+        {
+          path: "/Home",
+          element: <HomeView />,
+        },
+        {
+          path: "/user",
+          element: <UserView />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <HomeView />,
-      },
-      {
-        path: "/user",
-        element: <UserView />,
-      },
-    ],
-  },
-]);
+    basename: "/app2",
+  }
+);
 
 export default router;
