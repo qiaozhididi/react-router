@@ -46,3 +46,20 @@ npm install react-router-dom --save
 `<BrowserRouter>`使用HTML5 History API保持页面 和 URL 的同步，使用干净的URL将当前位置存储在浏览器的地址栏中
 
 URL模式: a.com/#/one 或者 a.com/one
+
+## HashRouter
+`<HashRouter>`使用 Hash 模式路由保持页面 和 URL 的同步。
+
+`BrowserRouter`与`HashRouter`区别：
+
+- BrowseRouter使用HTML5的history API，HashRouter使用哈希
+
+  - 地址表现形式不同
+
+    BrowserRouter : http://localhost:3000/app
+
+    HashRouter : http://localhost:3000/#/app
+
+- BrowseRouter地址的请求会发送到服务器，需要服务器的支持，而HashRouter的不会
+
+- 官方推荐使用BrowserRouter

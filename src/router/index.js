@@ -1,9 +1,9 @@
 //路由配置
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter,createHashRouter } from "react-router-dom";
 import ContainerView from "../views/ContainerView";
 import HomeView from "../views/HomeView";
 import UserView from "../views/UserView";
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
