@@ -65,3 +65,14 @@ URL模式: a.com/#/one 或者 a.com/one
 - 官方推荐使用BrowserRouter
 
 在路由v6.4版本新增createRoutesFromElements,目的切换路由风格，很多人依然习惯使用jsx语法
+
+## Route 和 Routes 
+- `<Routes>`包裹一组<Route>，每当地址发生变化时，<Routes>都会查看其所有子<Route>元素，以找到最佳路径匹配并呈现对应的UI
+  - path:设置访问路径
+  - element:设置对应URL要渲染的组件
+
+- `<Route>`用来配置URL与UI，如果其路径与当前地址栏中URL匹配，则会呈现其元素。
+  - path:设置访问路径
+  - element:设置对应URL要渲染的组件
+  - index:确定路由是否为索引路由
+  - caseSensitive:设置路径是否区分大小写，默认为false

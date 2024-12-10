@@ -13,8 +13,8 @@ const routes = createRoutesFromElements(
     <Route path="/user" element={<UserView />}></Route>
   </Route>
 );
-const router = createBrowserRouter(routes, {
+const route = createBrowserRouter(routes, {
   basename: "/app3",
 });
 
-export default router;
+export default route;
