@@ -76,3 +76,10 @@ URL模式: a.com/#/one 或者 a.com/one
   - element:设置对应URL要渲染的组件
   - index:确定路由是否为索引路由
   - caseSensitive:设置路径是否区分大小写，默认为false
+  
+## OutLet
+`<Outlet>`
+
+父路由元素中应使用<Outlet>来渲染其子路由元素。这允许在呈现子路由时显示嵌套UI。
+
+如果URL跟父路由的路径完全匹配，则会默认渲染设置了index属性的子路由，如果子路由中没有设置index的，则不渲染任何子路由。
