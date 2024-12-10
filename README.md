@@ -63,3 +63,5 @@ URL模式: a.com/#/one 或者 a.com/one
 - BrowseRouter地址的请求会发送到服务器，需要服务器的支持，而HashRouter的不会
 
 - 官方推荐使用BrowserRouter
+
+在路由v6.4版本新增createRoutesFromElements,目的切换路由风格，很多人依然习惯使用jsx语法
