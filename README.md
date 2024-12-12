@@ -112,3 +112,12 @@ props：
 - end：精准匹配，如：/news,/news/sport也包含/news，添加end后，就是完美的字符串对比
 
 - className：修改默认的class名字.active
+
+## Navigate
+当渲染一个 <Navigate> 元素的时候，就会执行它指向的路由跳转（重定向）
+```js
+<Navigate to='/'/> 
+
+```
+
+一般逻辑发生变化后，想要跳转到其他页面（非手动点击方式）使用。
