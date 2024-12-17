@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { createSearchParams, Link, Navigate } from "react-router-dom";
 
 export default function HomeView() {
   //倒计时Navigate重定向跳转
@@ -42,7 +42,15 @@ export default function HomeView() {
           </h3>
         </div>
       ))}
-      <Link to={{ pathname: "/user", search: `user=${"qzfrato"}` }}>用户</Link>
+      {/* <Link to={{ pathname: "/user", search: `user=${"qzfrato"}` }}>用户</Link> */}
+      <Link
+        to={{
+          pathname: "/user",
+          search: `${createSearchParams({ user: "qzfrato" })}`,
+        }}
+      >
+        用户
+      </Link>
     </div>
   );
 }
