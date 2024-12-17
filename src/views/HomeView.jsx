@@ -43,12 +43,15 @@ export default function HomeView() {
         </div>
       ))}
       {/* <Link to={{ pathname: "/user", search: `user=${"qzfrato"}` }}>用户</Link> */}
-      <Link
+      {/* <Link
         to={{
           pathname: "/user",
           search: `${createSearchParams({ user: "qzfrato" })}`,
         }}
       >
+        用户
+      </Link> */}
+      <Link to="/user" state={{ user: "qzfrato" }}>
         用户
       </Link>
     </div>
