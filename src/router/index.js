@@ -1,9 +1,10 @@
 //路由配置
-import { createBrowserRouter,createHashRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import ContainerView from "../views/ContainerView";
 import HomeView from "../views/HomeView";
 import UserView from "../views/UserView";
-const router = createHashRouter(
+import ItemViews from "../views/ItemViews";
+const router = createBrowserRouter(
   [
     {
       path: "/",
@@ -16,6 +17,10 @@ const router = createHashRouter(
         {
           path: "/user",
           element: <UserView />,
+        },
+        {
+          path: "/ItemViews/:content",
+          element: <ItemViews />,
         },
       ],
     },

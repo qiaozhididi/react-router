@@ -25,9 +25,9 @@ function App() {
       </BrowserRouter> */}
 
       {/* 新版本 */}
-      {/* <RouterProvider router={router}></RouterProvider> */}
+      <RouterProvider router={router}></RouterProvider>
 
-      <RouterProvider router={route}></RouterProvider>
+      {/* <RouterProvider router={route}></RouterProvider> */}
     </div>
   );
 }
