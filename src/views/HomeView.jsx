@@ -42,6 +42,7 @@ export default function HomeView() {
           </h3>
         </div>
       ))}
+      <Link to={{ pathname: "/user", search: `user=${"qzfrato"}` }}>用户</Link>
     </div>
   );
 }
