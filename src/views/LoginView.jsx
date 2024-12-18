@@ -17,7 +17,12 @@ export default function LoginView() {
     if (username === "qzfrato" && password === "123456") {
       // setIsLogin(true);
       // 通过js实现也页面跳转，变成编程式导航
-        navigate("/Home");
+      // navigate("/Home");
+      //传参
+      // navigate(`/Home/${username}`);
+      // navigate("/Home", { search: `${createSearchParams({ user: "qzfrato" })}` });
+      // navigate("/Home", { search: `user=${"qzfrato"}` });
+      navigate("/Home", { state: { username } });
     }
   };
   return (

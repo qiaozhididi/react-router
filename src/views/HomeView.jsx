@@ -1,7 +1,15 @@
 import React from "react";
-import { createSearchParams, Link, Navigate } from "react-router-dom";
+import {
+  createSearchParams,
+  Link,
+  useParams,
+  useLocation,
+} from "react-router-dom";
 
 export default function HomeView() {
+  // const params = useParams();
+  const location = useLocation();
+  // console.log(params);
   //倒计时Navigate重定向跳转
   const [count, setCount] = React.useState(5);
   React.useEffect(() => {
@@ -54,6 +62,7 @@ export default function HomeView() {
       <Link to="/user" state={{ user: "qzfrato" }}>
         用户
       </Link>
+      <h3>当前用户：{location.state.username}</h3>
     </div>
   );
 }
