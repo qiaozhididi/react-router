@@ -4,8 +4,13 @@ import ContainerView from "../views/ContainerView";
 import HomeView from "../views/HomeView";
 import UserView from "../views/UserView";
 import ItemViews from "../views/ItemViews";
+import LoginView from "../views/LoginView";
 const router = createBrowserRouter(
   [
+    {
+      path: "/login",
+      element: <LoginView />,
+    },
     {
       path: "/",
       element: <ContainerView />,

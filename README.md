@@ -131,3 +131,9 @@ props：
 
 ### search
 在要跳转的路由路径中使用?search这种语法传递参数，然后在跳转后的页面中使用useSearchParams读取传递过来的参数
+
+### state
+在要跳转的路由路径中使用state这种语法传递参数，然后在跳转后的页面中使用useLocation读取传递过来的参数
+
+### useNavigate
+这个是react-router-dom v6.4版本新增的API，用于页面跳转，它可以实现页面的跳转，并且可以传递参数，并且可以实现页面的刷新。
