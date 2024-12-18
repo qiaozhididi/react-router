@@ -169,3 +169,62 @@ export default function(){
 }
 
 ```
+
+## 路由懒加载
+路由懒加载是非常有必要的，当项目过于庞大，一次性加载太多页面容易造成卡顿，此时懒加载页面就可以改变这一问题！
+
+```js
+//router.js
+import { createHashRouter } from "react-router-dom"
+import React from 'react'
+import ContainerView from "../views/ContainerView"
+import HomeView from "../views/HomeView"
+
+
+const UserView = React.lazy(() => import("../views/UserView"))
+
+
+const routes = [
+   {
+    path: "/",
+    element: <ContainerView />,
+    children: [
+       {
+        path: "/",
+        element: <HomeView />
+       },
+       {
+        path: "/user",
+        element: <UserView />
+       }
+     ]
+   }
+]
+
+
+const router = createHashRouter(routes)
+
+
+export default router
+```
+```js
+// App.js
+import rotuer from "./router/index"
+import { RouterProvider } from "react-router-dom"
+import { Suspense } from 'react'
+
+
+function App() {
+ return (
+  <div className="App">
+   <Suspense fallback={<div>页面跳转中...</div>}>
+    <RouterProvider router={rotuer}></RouterProvider>
+   </Suspense>
+  </div>
+  );
+}
+
+
+export default App;
+
+```
