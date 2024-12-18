@@ -137,3 +137,35 @@ props：
 
 ### useNavigate
 这个是react-router-dom v6.4版本新增的API，用于页面跳转，它可以实现页面的跳转，并且可以传递参数，并且可以实现页面的刷新。
+
+### useRoutes
+useRoutes跟<Routes>有同等的功能，只不过它使用对象来替代<Route>
+```js
+// router.js
+import { useRoutes } from 'react-router-dom'
+import ContainerView from "../views/ContainerView";
+import HomeView from "../views/HomeView"
+import UserView from "../views/UserView"
+
+
+export default function(){
+  const element = useRoutes([
+     {
+      path:"/",
+      element:<ContainerView />,
+      children:[
+         {
+          path:"",
+          element:<HomeView />
+         },
+         {
+          path:"/user",
+          element:<UserView />
+         }
+       ]
+     }
+   ])
+  return element
+}
+
+```
